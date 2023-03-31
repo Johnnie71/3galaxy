@@ -17,10 +17,12 @@ const scene = new THREE.Scene();
 /**
  * Galaxy
  */
-
 const parameters = {};
 parameters.count = 1000;
 parameters.size = 0.02;
+
+gui.add(parameters, "count").min(100).max(1000000).step(100);
+gui.add(parameters, "size").min(0.001).max(0.01).step(0.001);
 
 const generateGalaxy = () => {
 	/**
